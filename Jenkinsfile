@@ -3,9 +3,9 @@ pipeline {
 
     stages {
         stage('Checkout') {
-            steps {
-                git 'https://github.com/Ranjana0123/MultiServiceDockerApp'
-            }
+          steps {
+            git branch: 'main', url: 'https://github.com/Ranjana0123/MultiServiceDockerApp'
+          }
         }
 
         stage('Build with Maven') {
