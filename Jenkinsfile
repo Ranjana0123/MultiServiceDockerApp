@@ -1,6 +1,10 @@
 pipeline {
     agent any
-
+ environment {
+        MAVEN_HOME = tool 'jenkins-maven' // Set this in Jenkins tools config
+        DOCKER_IMAGE = 'multiservice-image'
+        CONTAINER_NAME = 'multiservice-container'
+    }
     stages {
         stage('Checkout') {
             steps {
